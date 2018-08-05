@@ -20,11 +20,14 @@ print(f)
 
 # def count_bit(n):
 #     return bin(n).count("1")
-#
-#
+
 # d = count_bit(0)
 # print(d)
 # e = count_bit(9)
 # print(e)
 # f = count_bit(10)
 # print(f)
+
+"""
+把数字转换为二进制，统计有1出现的次数
+"""
