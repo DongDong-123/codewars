@@ -74,19 +74,14 @@ class Solution:
         return boat_num
 
 # 测试数据
-# people = [1, 2, 3,2, 3, 3]
-# limit = 3
+people = [1, 2, 3,2, 3, 3]
+limit = 3
 
 # people = [3,2,2,1]
 # limit = 3
 
 # people = [3,5,3,4]
 # limit = 5
-
-# people = people[:3000]
-# limit = 10
-
-limit = 100
 
 start = time.clock()
 a = Solution()
