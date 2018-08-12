@@ -45,20 +45,18 @@ class Solution:
         :rtype: int
         """
         boat_num = people.count(limit)  # 定义救生艇数量，统计最大载重人数，赋值
-        if boat_num != 0:
-            for i in range(boat_num):  # 删除所有最大的载重人数
-                people.remove(limit)
+
+        while limit in people:  # 删除所有最大的载重人数
+            people.remove(limit)
         people.sort()  # 按升序排序
         people = deque(people)  # 将列表转换为双向队列
-        # print(type(people))
-        length = len(people)
-        for i in range(length):
+        while people:
             if len(people) > 1:
                 weight = people[0] + people[-1]  # 最小体重加最大体重
                 if weight > limit:  # 若体重大于最大载重
-                    wei_num = people.count(people[-1])  # 统计最大体重的数量
-                    for i in range(wei_num):  # 循环删除最大体重
-                        people.pop()
+                    wei_max = people[-1]  # 最大体重
+                    while wei_max in people:  # 循环删除最大体重
+                        people.pop()  # 或 people.remove(wei_max)
                         boat_num += 1  # 每删除一个，增加一个救生艇
                 else:
                     boat_num += 1
@@ -66,19 +64,18 @@ class Solution:
                     people.pop()  # 删除最右侧元素（最大体重）
             elif len(people) == 1:  # 当只剩下一个人时，救生艇加1后删除
                 boat_num += 1
+                print(people)
                 people.pop()
-            else:  # 没有人了，结束
-                break
 
         # print(boat_num)
         return boat_num
 
 # 测试数据
-people = [1, 2, 3,2, 3, 3]
-limit = 3
-
-# people = [3,2,2,1]
+# people = [1, 2, 3,2, 3, 3]
 # limit = 3
+
+people = [2,1]
+limit = 3
 
 # people = [3,5,3,4]
 # limit = 5
@@ -86,7 +83,7 @@ limit = 3
 start = time.clock()
 a = Solution()
 # a.numRescueBoats(people, limit)
-print(a.numRescueBoats(people, limit),len(people))
+print(a.numRescueBoats(people, limit))
 end = time.clock()
 print(end - start)
 
