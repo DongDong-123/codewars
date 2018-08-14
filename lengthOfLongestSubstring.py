@@ -1,28 +1,30 @@
-resault = []
-a = "abcabagkalajghjhgjdahahuhuahjabvddahjdkdjdjaddgddadsaqwertyuijhgfdsazxcvbcbb"
+class Solution():
+    resault = []
+    def lengthOfLongestSubstring(self, strs):
+        se = set()
+        num = 0
+        i_start = 0
+        for i, v in enumerate(strs):
+            se.add(v)
+            num += 1
+            if len(se) != num:
+                i_end = i
+                b = strs[i_start:i_end]
+                self.resault.append(len(b))
+                # print(len(b))
+                # print(resault)
+
+                self.lengthOfLongestSubstring(strs[i_end:])
+                break
+
+        return max(self.resault)
 
 
-def lengthOfLongestSubstring(strs):
-    se = set()
-    num = 0
-    i_start = 0
-    for i, v in enumerate(strs):
-        se.add(v)
-        num += 1
-        if len(se) != num:
-            i_end = i
-            b = strs[i_start:i_end]
-            resault.append(len(b))
-            # print(len(b))
-            # print(resault)
+if __name__ == "__main__":
+    test_data = "abcabagkalajghjhgjdahahuhuahjabvddahjdkdjdjaddgddadsaqwertyuijhgfdsazxcvbcbb"
+    obs = Solution()
 
-            lengthOfLongestSubstring(strs[i_end:])
-            break
-
-    return max(resault)
-
-
-print(lengthOfLongestSubstring(a))
+    print(obs.lengthOfLongestSubstring(test_data))
 
 """
 给定一个字符串，找出不含有重复字符的最长子串的长度。
