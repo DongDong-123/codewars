@@ -1,32 +1,21 @@
 def count_bits(n):
-    global b
-    c = []
     a = bin(n)
-    for i in a:
-        c.append(i)
-        b = c.count("1")
+    b = a.count("1")
     return b
 
 
-d = count_bits(0)
-print(d)
-e = count_bits(9)
-print(e)
-f = count_bits(10)
-print(f)
-
-# the best way
-
-
-# def count_bit(n):
+# def count_bit(n):  # the best way
 #     return bin(n).count("1")
 
-# d = count_bit(0)
-# print(d)
-# e = count_bit(9)
-# print(e)
-# f = count_bit(10)
-# print(f)
+
+if __name__ == "__main__":
+    d = count_bits(0)
+    print(d)
+    e = count_bits(9)
+    print(e)
+    f = count_bits(10)
+    print(f)
+
 
 """
 把数字转换为二进制，统计有1出现的次数

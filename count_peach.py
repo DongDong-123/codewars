@@ -7,22 +7,23 @@ def test(x):
     :param x: 设桃子的数量为x
     :return: 符合条件的数量
     """
-    a = copy.deepcopy(x)  # 用a存储原始数量，避免测试运算时被更改
+    raw_num = copy.deepcopy(x)  # 用a存储原始数量，避免测试运算时被更改
     for i in range(5):  # 5只猴子，重复运算5次
         x = ((x-1) / 5) * 4  # x为每次剩下的数量
 
-    if x % round(x) == 0:  # 若x对round(x)取余为0，则x为整数，符合条件
-        print(a)  # 输出a
-        exit()  # 因为只取最小的桃子数量，所以结束运算
+    if x == round(x):  # 若x等于round(x)，则x为整数，符合条件
+        print(raw_num)  # 输出a
+        return raw_num
 
 
-def run():
+def run(n):
     # 给桃子的数量划定一个大的范围，因为分5份总是多一个，所以，桃子的数量除5总是余1，因此设置步长为5，以节约资源
-    for i in range(6, 1000000, 5):
+    for i in range(6, n, 5):
         test(i)
 
 
-run()
+if __name__ == "__main__":
+    run(10000)
 
 
 """
