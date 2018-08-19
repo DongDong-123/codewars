@@ -19,6 +19,7 @@ def count_num(array):
     return {i: array.count(i) for i in array}  # 使用生成器，原理等同于方法一
 
 
-lists = ['a', 'a', 'b', 'b', 'b']
-res = count_num(lists)
-print(res)
+if __name__ == "__main__":
+    lists = ['a', 'a', 'b', 'b', 'b']
+    res = count_num(lists)
+    print(res)
