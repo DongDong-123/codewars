@@ -2,7 +2,7 @@ import time
 
 
 # 冒泡排序
-def bubble_sort():
+def bubble_sort(lists):
     move_count = 0  # 统计移动次数
     circle_count = 0  # 统计循环次数
     n = len(lists)
@@ -16,16 +16,17 @@ def bubble_sort():
                 move_count += 1
         if count == 0:
             break
-    print('move_count:', move_count)  # for test
-    print('circle_count:', circle_count)  # for test
+    # print('move_count:', move_count)  # for test
+    # print('circle_count:', circle_count)  # for test
     return lists
 
 
-lists = [3, 4, 7, 6, 45, 23, 69, 9, 55, 21, 11, 8]
-start = time.clock()
-print(bubble_sort())
-end = time.clock()
-print(end-start)
+if __name__ == "__main__":
+    lists = [3, 4, 7, 6, 45, 23, 69, 9, 55, 21, 11, 8]
+    start = time.clock()
+    print(bubble_sort(lists))
+    end = time.clock()
+    print(end-start)
 
 
 # run result

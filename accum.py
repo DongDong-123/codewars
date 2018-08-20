@@ -12,6 +12,7 @@ def accum(s):
     return '-'.join(word_list)  # 列表中的元素使用-连接
 
 
-aa = 'abkdg'
-res = accum(aa)
-print(res)
+if __name__ == "__main__":
+    result = 'abkdg'
+    res = accum(result)
+    print(res)
