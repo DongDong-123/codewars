@@ -23,4 +23,5 @@ def factorial(n):
     return result
 
 
-print(factorial(6))
+if __name__ == "__main__":
+    print(factorial(6))

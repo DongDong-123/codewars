@@ -15,11 +15,10 @@ def abbreviate(s):
             return s[0] + str(len(s)-2) + s[-1]  # 不是连接词，直接切片拼接转换
 
 
-# Test:
-print(abbreviate('elephant-ride'))  # Out: e6t-r2e
-print(abbreviate("internationalization"))  # Out: i18n
-print(abbreviate('Accessibility'))  # Out: A11y
-
+if __name__ == "__main__":
+    print(abbreviate('sist'))  # Out: e6t-r2e
+    print(abbreviate("internationalization"))  # Out: i18n
+    print(abbreviate('Accessibility'))  # Out: A11y
 
 """
 Question:
