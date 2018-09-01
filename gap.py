@@ -26,15 +26,15 @@ import time
 def gap(g, m, n):
 
     prev = 2
-    for x in range(m|1, n + 1, 2):
-        if all(x%d for d in range(3, int(x**.5) + 1, 2)):
+    for x in range(m | 1, n + 1, 2):
+        if all(x % d for d in range(3, int(x**.5) + 1, 2)):
             if x - prev == g:
                 return [prev, x]
             prev = x
 
 
-print(gap(2, 100, 110))
-# gap(6, 300, 400)
+# print(gap(2, 100, 110))
+# # gap(6, 300, 400)
 
 """
 Question
@@ -72,3 +72,25 @@ gap(4, 130, 200) --> [163, 167] or (163, 167) or {163, 167}
 gap(6,100,110) --> nil or {0, 0} : between 100 and 110 we have 101, 103, 107, 109 but 101-107is not a 6-gap 
 because there is 103in between and 103-109is not a 6-gap because there is 107in between.
 """
+
+def dec(f):
+    n = 3
+    def wrapper(*args,**kw):
+        return f(*args,**kw) * n
+    return wrapper
+
+@dec
+def foo(n):
+    c = n * 2
+    return c
+
+# print(foo(2))
+
+class Person:
+    def __init__(self):
+        pass
+    def getAge(self):
+        print(__name__)
+
+p = Person()
+p.getAge()
