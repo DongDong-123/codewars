@@ -1,16 +1,16 @@
 import time
 
 
-def time_count(find_children):
-    def _test(dancing_brigade):
-        start = time.time()
-        # print('s', start)
-        print(find_children(dancing_brigade))
-        end = time.time()
-        # print('e', end)
-        times = end - start
-        print(times)
-    return _test
+# def time_count(find_children):
+#     def _test(dancing_brigade):
+#         start = time.clock()
+#         # print('s', start)
+#         print(find_children(dancing_brigade))
+#         end = time.clock()
+#         # print('e', end)
+#         times = end - start
+#         print(times)
+#     return _test
 
 # @time_count
 # def find_children(dancing_brigade):
@@ -37,53 +37,53 @@ def time_count(find_children):
 #
 #     return "".join(result)
 
-@time_count
-def find_children(dancing_brigade):
-
-    return ''.join(sorted(sorted(dancing_brigade), key=str.lower))
+# @time_count
+# def find_children(dancing_brigade):
+#
+#     return ''.join(sorted(sorted(dancing_brigade), key=str.lower))
     # return ''.join(sorted(dancing_brigade, key=lambda l: (l.lower(), l)))
     # return ''.join(sorted(dancing_brigade, key=lambda c: (c.upper(), c.islower())))
 
-find_children("BAaabbbaaZazbbzz")
+# find_children("BAaabbbaaZazbbzz")
 
 # 带参数装饰器
-# def use_logging(func):
-#     def _deco(*args, **kwargs):
-#         print("%s is running" % func.__name__)
-#         func(*args, **kwargs)
-#     return _deco
-#
-#
-# @use_logging
-# def bar(a, b):
-#     print('i am bar:%s' % (a + b))
-#
-#
-# @use_logging
-# def foo(a, b, c):
-#     print('i am bar:%s' % (a + b + c))
-#
-#
-# bar(1, 2)
-# foo(1, 2, 3)
+def use_logging(func):
+    def _deco(*args, **kwargs):
+        print("%s is running" % func.__name__)
+        func(*args, **kwargs)
+    return _deco
 
 
-#
-# def timeit(func):
-#     def wrapper():
-#         start = time.clock()
-#         print(start)
-#         func()
-#         end =time.clock()
-#         print(end)
-#         result = end - start
-#         print(result)
-#     return wrapper
-#
-#
-# @timeit
-# def foo():
-#     print('函数执行时间')
-#
-#
-# foo()
+@use_logging
+def bar(a, b):
+    print('i am bar:%s' % (a + b))
+
+
+@use_logging
+def foo(a, b, c):
+    print('i am bar:%s' % (a + b + c))
+
+
+bar(1, 2)
+foo(1, 2, 3)
+
+
+
+def timeit(func):
+    def wrapper():
+        start = time.clock()
+        print(start)
+        func()
+        end =time.clock()
+        print(end)
+        result = end - start
+        print(result)
+    return wrapper
+
+
+@timeit
+def foo():
+    print('函数执行时间')
+
+
+foo()

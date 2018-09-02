@@ -1,0 +1,71 @@
+abbreviate.py  # 字符串转为缩写形式
+accum.py  # 指定字符串切割后，单个部分首字母大写，后面添加索引数个该字母的小写
+bi_bao.py  # 闭包案例
+bubble_sort.py  # 冒泡排序
+chained.py  #
+count.py  # 统计列表中元素的数量
+count_peach.py  # 猴子分桃
+countBits.py  # 数字转为二进制后统计1的数量
+decodeatindex.py  # 字符串乘其后第一个数字
+deque.py  # 双端队列
+digital_root.py  # 把整数里的所有数字的和
+digui_test.py  # 测试递归最大深度
+equals.py  # 求n以内数字的和
+factorial.py  # 求n的阶乘
+fighters.py  #  决斗谁先死
+find_children.py  #
+find_short.py  #
+find_vowl.py  #
+fold_to_distance.py  #
+friend.py  #
+gap.py  #
+getcount.py  #
+gps.py  #
+insertion_sort.py  #
+isMatch.py  #
+isogram.py  #
+lemonadeChange.py  #
+lengthOfLongestSubstring.py  #
+longest.py  #
+longestCommonPrefix.py  # 最长公共前缀
+longestPalindrome.py  #
+LongestSubstring.py  #
+maxArea.py  #
+merge_sort  # 归并排序
+min_max.py  #
+move_hannuota.py  #
+myAtoi.py  #
+nameList.py  #
+nb_dig.py  #
+numRescueBoats.py  #
+o_ji_lide.py  #
+palindrome.py  #
+plus_list.py  #
+possibleBipartition.py  #
+prime_1.py  #
+prime_2.py  #
+projectionArea.py  #
+quadratic.py  #
+queue.py  # 队列
+quick_sort.py  # 快速排序
+remove_smallest.py  #
+remove_smallest2.py  #
+reverse_int.py  #
+reverse_words.py  #
+revrot.py  #
+row_sum_odd_numbers.py  #
+selection_sort.py  #
+shiftingLetters.py  #
+singlelink.py  #
+sorts.py  #
+square_difits.py  #
+stock.py  # 栈
+sum_dig_pow.py  #
+test3.py  #
+test_data(20000).py  #
+threeSum.py  #
+tower_builder.py  #
+uncommonFromSentences.py  #
+unique_in_order.py  #
+vaildate.py  #
+vowels_number.py  #
