@@ -142,6 +142,7 @@ class SinCycLinkedlist(object):
 
 if __name__ == "__main__":
     ll = SinCycLinkedlist()
+    print(ll.length())
     ll.add(1)
     ll.add(2)
     ll.append(3)

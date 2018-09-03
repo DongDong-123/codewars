@@ -6,12 +6,13 @@ def friend(x):
 
     return b
 
+
 a = friend(["Ryan", "Kieran", "Mark",])
 print(a)
 
 #别人的方法，
-def friend(x):
-    return [f for f in x if len(f) == 4]
-
-a = friend(["Ryan", "Kieran", "Mark",])
-print(a)
+# def friend(x):
+#     return [f for f in x if len(f) == 4]
+#
+# a = friend(["Ryan", "Kieran", "Mark",])
+# print(a)
