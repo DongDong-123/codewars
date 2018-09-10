@@ -1,7 +1,9 @@
 class Node(object):
     """节点"""
     def __init__(self, item):
+        # item存放数据元素
         self.item = item
+        # 下一个节点的标识
         self.next = None
 
 
@@ -156,3 +158,4 @@ if __name__ == "__main__":
     ll.remove(1)
     print("length:", ll.length())
     ll.travel()
+    print(ll)
