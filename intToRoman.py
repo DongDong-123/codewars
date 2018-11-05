@@ -4,22 +4,23 @@ class Solution:
         :type num: int
         :rtype: str
         """
-        self.num_length = len(str(num))
-        num_list = list(map(int, str(num)))
-        num_single = [num_list[i] * 10 ** (self.num_length - i - 1) for i in range(self.num_length)]
-        print(num_single)
+        num_list = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]
+        roman_list = ['M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I']
+        res = ''
+        if num < 1 or num > 3999:
+            return 0
+        else:
+            for i in range(len(num_list)):
+                while num >= num_list[i]:
+                    num -= num_list[i]
+                    res += roman_list[i]
+
+        return res
 
 
-    def ToRoman(self, number):
-        # if self.num_length >= 4:
-        if number >= 1000:
-            return  number / 1000
 
-
-
-
-# a = Solution()
-# print(a.intToRoman(1994))
+a = Solution()
+print(a.intToRoman(1994))
 # import collections
 # a = [1, 2, 3, 4, 5, 3]
 # b = collections.deque(a, maxlen=10)
@@ -46,12 +47,12 @@ class Solution:
 #
 # a = os.stat('D:\\Users\\Dong\\Desktop\\funds')
 # print(a)
-import pymysql
-
-conn = pymysql.connect(host='160.11.123.130', user='root', password='111',db='test')
-cur = conn.cursor()
-sql = 'insert into table(id,title) values(1,"标题");'
-cur.execute(sql)
-conn.commit()
-
-sql2 = 'select id,url from v_url'
+# import pymysql
+#
+# conn = pymysql.connect(host='160.11.123.130', user='root', password='111',db='test')
+# cur = conn.cursor()
+# sql = 'insert into table(id,title) values(1,"标题");'
+# cur.execute(sql)
+# conn.commit()
+#
+# sql2 = 'select id,url from v_url'
