@@ -1,3 +1,4 @@
+
 def quick_sort(arrys, left, right):
 
     if left >= right:
@@ -26,7 +27,9 @@ def quick_sort(arrys, left, right):
     return arrys
 
 
-lis = [1, 2, 5, 3, 8, 29, 3]
-n = len(lis)
-quick_sort(lis, 0, n-1)
-# print(quick_sort(lis, 0, n-1))
+if __name__ =="__main__":
+
+    lis = [1, 2, 5, 3, 8, 29, 3]
+    n = len(lis)
+    quick_sort(lis, 0, n-1)
+    # print(quick_sort(lis, 0, n-1))

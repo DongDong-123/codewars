@@ -20,7 +20,8 @@ class Solution:
 
 
 if __name__ == "__main__":
-    nums = [1, 1, 2]
+    # nums = [1, 1, 2]
+    nums = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4]
     res = Solution()
     print(res.removeDuplicates(nums))
 
