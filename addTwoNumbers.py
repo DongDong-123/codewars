@@ -139,17 +139,17 @@ if __name__ == "__main__":
     print(lens)
     print(lens2)
     list1 = [2,3,7,5]
-    list2 = [4,6,2]
+    list2 = [4,6,2,4,6,7,8]
     for i in list1:
         l1.append(i)
     for i in list2:
         l2.append(i)
 
-    print(l1.length())
-    print(l2.length())
-    print(l1, type(l1), l2)
-    print(l1.print_ListNode(ls))
-    l3 = test()
+    # print(l1.length())
+    # print(l2.length())
+    # print(l1, type(l1), l2)
+    # print(l1.print_ListNode(ls))
+    # l3 = test()
     # l3.addTwoNumbers(l1, l2)
 
 
